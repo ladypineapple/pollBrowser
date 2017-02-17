@@ -1,7 +1,6 @@
 'use strict';
 
 const getFormFields = require(`../../../lib/get-form-fields`);
-
 const api = require('./api');
 const ui = require('./ui');
 const store = require('./store');
@@ -51,11 +50,11 @@ const onSignOut = function (event) {
 };
 
 const addHandlers = () => {
-  $('#sign-up').show();
-  $('#sign-in').show();
-  $('#sign-out').hide();
-  $('#change-password').hide();
-  $('#game-board-container').hide();
+  // $('#sign-up').show();
+  // $('#sign-in').show();
+  // $('#sign-out').hide();
+  // $('#change-password').hide();
+  // $('#game-board-container').hide();
   $('#sign-up').on('submit', onSignUp);
   $('#sign-in').on('submit', onSignIn);
   $('#change-password').on('submit', onChangePassword);
