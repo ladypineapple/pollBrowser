@@ -1,6 +1,17 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
+
+legend {
+  color: white;
+}
+
 body {
+  background: linear-gradient(35deg, #64B6AC, #3C6B7C 100%);
+  color: white;
+}
+
+.submit {
+  color: white;
   background: linear-gradient(35deg, #64B6AC, #3C6B7C 100%);
 }
