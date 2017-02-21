@@ -6,13 +6,13 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 legend {
   font-family: 'Amatic SC', cursive;
   font-size: 22px;
-  color: white;
+  color: black;
 }
 
 body {
   font-family: 'Amatic SC', cursive;
   background: linear-gradient(35deg, #64B6AC, #3C6B7C 100%);
-  color: white;
+  color: black;
 }
 
 .message-user {
@@ -26,7 +26,7 @@ p {
 .submit{
   background: linear-gradient(35deg, #64B6AC, #3C6B7C 100%);
   font-size: 18px;
-  color: white;
+  color: black;
   background: linear-gradient(35deg, #64B6AC, #3C6B7C 100%);
   border-color: teal;
   border:2px solid teal;
@@ -41,7 +41,7 @@ p {
 .submit:hover{
   color:teal;
 }
-.submit:after{
-  border:2px solid black;
-
-}
+// .submit:after{
+//   border:2px solid black;
+//
+// }

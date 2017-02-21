@@ -22,7 +22,7 @@ const signInSuccess = () => {
   $('#sign-out').show();
   $('#show-votes').show();
   $('#show-polls').show();
-  $('.message-player').text('Welcome!');
+  $('.message-player').text('Please select a button to get started');
 
   // $('#board').show();
   // if (data) {
@@ -37,6 +37,7 @@ const changePasswordSuccess = () => {
 
 const signOutSuccess = () => {
     $('#sign-out').hide();
+    $('.dropdown-menu').hide();
     $('#change-password').hide();
     $('#show-polls').hide();
     $('#show-votes').hide();
