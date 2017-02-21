@@ -19,13 +19,29 @@ body {
   font-size: 24px;
 }
 
-.submit {
+p {
+  font-size: 18px;
+}
+
+.submit{
+  background: linear-gradient(35deg, #64B6AC, #3C6B7C 100%);
   font-size: 18px;
   color: white;
   background: linear-gradient(35deg, #64B6AC, #3C6B7C 100%);
   border-color: teal;
+  border:2px solid teal;
+  transition: color 0.2s
 }
+.submit:after{
+  content:" ";
+  border:2px solid teal;
+  display:inline-block;
+  transition:all 0.4s;
+}
+.submit:hover{
+  color:teal;
+}
+.submit:after{
+  border:2px solid black;
 
-p {
-  font-size: 18px;
 }
