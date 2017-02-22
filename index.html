@@ -12,14 +12,141 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body class="container-fluid">
-      <h1>Example</h1>
+      <h1>Magnetic Polls</h1>
+      <br>
+      <form id="sign-in">
+        <fieldset>
+          <legend>Sign in!</legend>
+          <label class="email">
+            Email:
+            <input type="text" name="credentials[email]">
+          </label>
+          <label class="password">
+            Password:
+            <input type="password" name="credentials[password]">
+          </label>
+          <input class="submit btn btn-default" type="submit" name="submit" value="Sign in!">
+        </fieldset>
+      </form>
+      <form id="sign-up">
+  <fieldset>
+    <legend>Sign up!</legend>
+    <label class="email">
+      Email:
+      <input type="text" name="credentials[email]">
+    </label>
+    <label class="password">
+      Password:
+      <input type="password" name="credentials[password]">
+    </label>
+    <label class="password_confirmation">
+      Password Confirmation:
+      <input type="password" name="credentials[password_confirmation]">
+    </label>
+    <input class="submit btn btn-default" type="submit" name="submit" value="Sign up!">
+  </fieldset>
+</form>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.</p>
+<form id="change-password">
+  <fieldset>
+    <legend>Change Password!</legend>
+    <label>
+      Current Password:
+      <input type="password" name="passwords[old]">
+    </label>
+    <label>
+      New Password:
+      <input type="password" name="passwords[new]">
+    </label>
+
+    <input class="submit btn btn-default" type="submit" name="submit" value="Change Password!">
+  </fieldset>
+</form>
+
+<form id="sign-out">
+  <fieldset>
+    <legend>Sign Out!</legend>
+    <input class="submit btn btn-default" type="submit" name="submit" value="Sign Out!">
+  </fieldset>
+</form>
+<br>
+<br>
+<div id="message-user"></div>
+      <br>
+      <br>
+      <div class="btn-group" role="group" aria-label="...">
+  <!-- <form id="menu">
+    <fieldset>
+      <button type="submit" class="btn btn-default">Menu</button>
+    </fieldset>
+  </form> -->
+</div>
+
+<form id="poll-search" class="poll-search">
+  <div class="form-group">
+    <input type="text" name="poll[id]" placeholder="Search by ID" class="show-input">
+  </div>
+  <button type="submit" class="btn btn-default"> Search </button>
+</form>
+<br>
+<div class="btn-group" id="poll-destroy">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Delete
+    </button>
+  <div class="dropdown-menu">
+    <form class="polls">
+      <div class="form-group">
+        <input type="text" name="poll[id]" placeholder="ID of poll to delete">
+      </div>
+      <button type="submit" class="btn btn-danger">Delete Poll</button>
+    </form>
+  </div>
+</div>
+
+<div class="btn-group" id="edit-poll">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Edit
+    </button>
+  <div class="dropdown-menu">
+    <form class="polls">
+      <div class="form-group">
+        <input type="text" name="poll[id]" placeholder="ID">
+        <input type="text" name="poll[title]" placeholder="Title">
+        <input type="text" name="poll[body]" placeholder="Body">
+        <input type="text" name="poll[option1]" placeholder="Option1">
+        <input type="text" name="poll[option2]" placeholder="Option2">
+      </div>
+      <button type="submit" class="btn btn-default">Edit A Poll</button>
+    </form>
+  </div>
+</div>
+
+<div class="btn-group" id="post-poll">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Create
+    </button>
+  <div class="dropdown-menu">
+    <form class="polls">
+      <div class="form-group">
+        <input type="text" name="poll[title]" placeholder="Title">
+        <input type="text" name="poll[body]" placeholder="Body">
+        <input type="text" name="poll[option1]" placeholder="Option1">
+        <input type="text" name="poll[option2]" placeholder="Option2">
+      </div>
+      <button type="submit" class="btn btn-default">Add A Poll</button>
+    </form>
+  </div>
+</div>
+<div id="content" class="content">
+</div>
+      <br>
+      <br>
+      <!-- <input class="submit" id="show-votes" class="button" type="button" value="Show Votes" /> -->
+      <!-- <input class="btn btn-default" id="poll-listing" class="button" type="button" value="Show All My Polls" /> -->
+      <br>
+      <br>
+      <br>
+      <br>
+
     </body>
 </html>

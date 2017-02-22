@@ -1,2 +1,43 @@
+
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC:400,300,700);
+
+legend {
+  font-family: 'Amatic SC', cursive;
+  font-size: 22px;
+  color: black;
+}
+
+body {
+  font-family: 'Amatic SC', cursive;
+  background: linear-gradient(35deg, #64B6AC, #3C6B7C 100%);
+  color: black;
+}
+
+#message-user {
+  font-size: 20px;
+  color: white;
+}
+
+p {
+  font-size: 18px;
+}
+
+.btn{
+  color: black;
+  transition: color 0.2s
+}
+.btn:after{
+  border: solid teal;
+  display:inline-block;
+  transition:all 0.4s;
+}
+.btn:hover{
+  background: linear-gradient(35deg, #64B6AC, #3C6B7C 100%);
+  color: white;
+}
+// .submit:after{
+//   border:2px solid black;
+//
+// }
