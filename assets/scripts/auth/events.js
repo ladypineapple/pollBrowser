@@ -53,6 +53,10 @@ const addHandlers = () => {
   // $('#sign-up').show();
   // $('#sign-in').show();
   $('#sign-out').hide();
+  $('#edit-poll').hide();
+  $('#poll-destroy').hide();
+  $('#post-poll').hide();
+  $('#show-polls').hide();
   $('#change-password').hide();
   $('#show-votes').hide();
   $('#show-polls').hide();

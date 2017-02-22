@@ -19,9 +19,10 @@ const showSuccess = (data) => {
   $('.content').show();
   $('.content').empty().append(showPollHtml);
   $('.show-input').val('');
-  $('#edit-poll').show();
-  $('#post-poll').show();
-  $('#poll-destroy').show();
+
+  // $('#edit-poll').show();
+  // $('#post-poll').show();
+  // $('#poll-destroy').show();
 };
 
 const createSuccess = (data) => {

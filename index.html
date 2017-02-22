@@ -12,6 +12,8 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body class="container-fluid">
+      <h1>Magnetic Polls</h1>
+      <br>
       <form id="sign-in">
         <fieldset>
           <legend>Sign in!</legend>
@@ -69,8 +71,7 @@
 </form>
 <br>
 <br>
-<div class="message-user"> Please sign in.</div>
-      <h1>Magnetic Polls</h1>
+<div id="message-user"> <h2></h2></div>
       <br>
       <br>
       <div class="btn-group" role="group" aria-label="...">
@@ -83,7 +84,7 @@
 
 <form id="poll-search" class="poll-search">
   <div class="form-group">
-    <input type="text" name="poll[id]" placeholder="Search" class="show-input">
+    <input type="text" name="poll[id]" placeholder="Search by ID" class="show-input">
   </div>
   <button type="submit" class="btn btn-default">Search</button>
 </form>
@@ -138,6 +139,7 @@
 </div>
 <div id="content" class="content">
 </div>
+      <br>
       <br>
       <!-- <input class="submit" id="show-votes" class="button" type="button" value="Show Votes" /> -->
       <input class="poll-listing" id="show-polls" class="button" type="button" value="Show Polls" />
