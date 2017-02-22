@@ -6,7 +6,7 @@ const success = (data) => {
 
 const signUpSuccess = () => {
   $('#sign-up').hide();
-  $('#message-player').text('Success. Please Sign in to play.');
+  $('#message-user').text('Success. Please Sign in to play.');
 
   // if (data) {
   //   console.log(data);
@@ -25,8 +25,8 @@ const signInSuccess = () => {
   $('#change-password').show();
   $('#sign-out').show();
   $('#show-votes').show();
-  $('#show-polls').show();
-  $('#message-player').text('Please select a button to get started');
+  $('#poll-listing').show();
+  $('#message-user').text('Please select a button to get started');
 
   // $('#board').show();
   // if (data) {
@@ -36,7 +36,7 @@ const signInSuccess = () => {
 
 const changePasswordSuccess = () => {
     $('#change-password').val('');
-    $('#message-player').val('Your password has been changed.');
+    $('#message-user').text('Your password has been changed.');
   };
 
 const signOutSuccess = () => {
@@ -47,13 +47,13 @@ const signOutSuccess = () => {
     $('#poll-destroy').hide();
     $('#post-poll').hide();
     $('#show-polls').hide();
-    $('#show-polls').hide();
+    $('#poll-listing').hide();
     $('#show-votes').hide();
     $('#sign-in').show();
     $('#sign-up').show();
     $('#sign-up').val('');
     $('#sign-in').val('');
-    $('#message-player').text('You are signed out.');
+    $('#message-user').text('You are signed out.');
 
     // if (data) {
     //   console.log(data);
@@ -62,7 +62,7 @@ const signOutSuccess = () => {
 
 const failure = (error) => {
   console.error(error);
-  $('.message-player').text('There was an error. Please try again.');
+  $('#message-user').text('Something went wrong. Please try again.');
 };
 
 module.exports = {

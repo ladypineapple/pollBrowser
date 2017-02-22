@@ -28,6 +28,7 @@ const onCreatePolls = function (event) {
   event.preventDefault();
   let data = getFormFields(event.target);
   console.log(data);
+  $('#message-user').text('Success! Poll #' + data.poll.id + ' created.');
   api.create(data)
   // .then(ui.indexSuccess)
   .then(ui.showSuccess)
@@ -44,12 +45,23 @@ const onUpdatePolls = function (event) {
 
 const onDestroyPolls = function (event) {
   event.preventDefault();
-  console.log('delete');
   let data = getFormFields(event.target);
   api.destroy(data.poll.id)
   .then(ui.destroySuccess)
   .catch(ui.failure);
 };
+
+// const onDestroyPolls = function (event) {
+//   event.preventDefault();
+//   console.log('delete');
+//   let data = getFormFields(event.target);
+//   api.destroy(data.poll.id)
+//     .then(() => {
+//       api.index
+//       .then(ui.indexSuccess);
+//     })
+//     .catch(ui.failure);
+// };
 
 const addHandlers = () => {
   $('#edit-poll').hide();

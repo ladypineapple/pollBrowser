@@ -52,14 +52,14 @@ const onSignOut = function (event) {
 const addHandlers = () => {
   // $('#sign-up').show();
   // $('#sign-in').show();
+  $('#message-user').text('Sign in to create a poll');
   $('#sign-out').hide();
   $('#edit-poll').hide();
   $('#poll-destroy').hide();
   $('#post-poll').hide();
-  $('#show-polls').hide();
+  $('#poll-listing').hide();
   $('#change-password').hide();
   $('#show-votes').hide();
-  $('#show-polls').hide();
   $('#sign-up').on('submit', onSignUp);
   $('#sign-in').on('submit', onSignIn);
   $('#change-password').on('submit', onChangePassword);

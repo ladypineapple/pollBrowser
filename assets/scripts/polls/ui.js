@@ -10,6 +10,7 @@ const indexSuccess = (data) => {
   });
   $('.content').show();
   $('.content').empty().append(showPollsHtml);
+  $('#message-user').text('Here are your polls.');
 };
 
 const showSuccess = (data) => {
@@ -20,6 +21,7 @@ const showSuccess = (data) => {
   $('.content').show();
   $('.content').empty().append(showPollHtml);
   $('.show-input').val('');
+  $('#message-user').text('Showing Poll #' + data.poll.id);
 
   // $('#edit-poll').show();
   // $('#post-poll').show();
@@ -32,25 +34,36 @@ const createSuccess = (data) => {
   });
   $('.content').show();
   $('.content').empty().append(showPollHtml);
-  $('.show-input').val('');
+  $('#message-user').text('Success!');
   console.log(data);
 };
 
-const updateSuccess = (data) => {
-  let showPollHtml = showPollTemplate({
-    poll: data.poll,
-  });
-  $('.content').empty().append(showPollHtml);
-  console.log(data);
+const updateSuccess = () => {
+  $('#message-user').text('Success. Poll updated.');
+
+  // const updateSuccess = (data) => {
+//   console.log(data);
+//   let showPollHtml = showPollTemplate({
+//     poll: data.poll,
+//   });
+//   $('.content').show();
+//   $('.content').empty().append(showPollHtml);
+//   $('.show-input').val('');
+//   $('#message-user').text('Success.Showing Poll #' + data.poll.id);
+
+  // $('#edit-poll').show();
+  // $('#post-poll').show();
+  // $('#poll-destroy').show();
 };
 
-const destroySuccess = (data) => {
-  console.log(data);
+const destroySuccess = () => {
+  $('.content').empty();
+  $('#message-user').text('Success! Poll deleted.');
 };
 
 const failure = (error) => {
-  // handles error
   console.error(error);
+  $('#message-user').text('Something went wrong. Please try again.');
 };
 
 module.exports = {
