@@ -8,6 +8,7 @@ const indexSuccess = (data) => {
   let showPollsHtml = showPollsTemplate({
     polls: data.polls,
   });
+  $('.content').show();
   $('.content').empty().append(showPollsHtml);
 };
 
@@ -29,7 +30,9 @@ const createSuccess = (data) => {
   let showPollHtml = showPollsTemplate({
     polls: data.polls,
   });
+  $('.content').show();
   $('.content').empty().append(showPollHtml);
+  $('.show-input').val('');
   console.log(data);
 };
 

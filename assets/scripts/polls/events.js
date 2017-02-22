@@ -15,7 +15,6 @@ const onMenu = function (event) {
 const onGetPolls = function (event) {
   event.preventDefault();
   let data =  getFormFields(event.target);
-
   if (data.poll.id.length === 0) {
     api.show.then(ui.failure);
   } else {
@@ -30,7 +29,8 @@ const onCreatePolls = function (event) {
   let data = getFormFields(event.target);
   console.log(data);
   api.create(data)
-  .then(ui.indexSuccess)
+  // .then(ui.indexSuccess)
+  .then(ui.showSuccess)
   .catch(ui.failure);
 };
 
@@ -54,10 +54,10 @@ const onDestroyPolls = function (event) {
 const addHandlers = () => {
   $('#edit-poll').hide();
   $('#post-poll').hide();
-  $('#content').hide();
+  // $('#content').hide();
   $('#poll-destroy').hide();
   $('#menu').on('submit', onMenu);
-  $('#show-polls').on('submit', onGetPolls);
+  $('#poll-listing').on('click', onMenu);
   $('#poll-search').on('submit', onGetPolls);
   $('#poll-destroy').on('submit', onDestroyPolls);
   $('#edit-poll').on('submit', onUpdatePolls);
