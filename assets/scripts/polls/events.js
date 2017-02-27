@@ -64,8 +64,13 @@ const onDestroyPolls = function (event) {
 // };
 
 const addHandlers = () => {
+  $('#sign-up').form('clear');
+  $('#sign-in').form('clear');
+  $('#sign-up').val('');
+  $('#sign-in').val('');
   $('#edit-poll').hide();
   $('#post-poll').hide();
+
   // $('#content').hide();
   $('#poll-destroy').hide();
   $('#menu').on('submit', onMenu);
