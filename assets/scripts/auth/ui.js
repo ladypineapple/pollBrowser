@@ -51,8 +51,8 @@ const signOutSuccess = () => {
     $('#show-votes').hide();
     $('#sign-in').show();
     $('#sign-up').show();
-    $('#sign-up').val('');
-    $('#sign-in').val('');
+    $('#sign-up')[0].reset();
+    $('#sign-in')[0].reset();
     $('#message-user').text('You are signed out.');
 
     // if (data) {
