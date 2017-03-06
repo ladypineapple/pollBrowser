@@ -7,10 +7,6 @@ const success = (data) => {
 const signUpSuccess = () => {
   $('#sign-up').hide();
   $('#message-user').text('Success. Please Sign in to play.');
-
-  // if (data) {
-  //   console.log(data);
-  // }
 };
 
 const signInSuccess = () => {
@@ -27,11 +23,6 @@ const signInSuccess = () => {
   $('#show-votes').show();
   $('#poll-listing').show();
   $('#message-user').text('Please select a button to get started');
-
-  // $('#board').show();
-  // if (data) {
-  //   console.log(data);
-  // }
 };
 
 const changePasswordSuccess = () => {
@@ -51,13 +42,9 @@ const signOutSuccess = () => {
     $('#show-votes').hide();
     $('#sign-in').show();
     $('#sign-up').show();
-    $('#sign-up').val('');
-    $('#sign-in').val('');
+    $('#sign-up')[0].reset();
+    $('#sign-in')[0].reset();
     $('#message-user').text('You are signed out.');
-
-    // if (data) {
-    //   console.log(data);
-    // }
   };
 
 const failure = (error) => {
