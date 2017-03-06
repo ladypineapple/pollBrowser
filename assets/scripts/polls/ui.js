@@ -4,7 +4,6 @@ const showPollsTemplate = require('../templates/poll-listing.handlebars');
 const showPollTemplate = require('../templates/poll-show.handlebars');
 
 const indexSuccess = (data) => {
-  console.log(data);
   let showPollsHtml = showPollsTemplate({
     polls: data.polls,
   });
@@ -14,7 +13,6 @@ const indexSuccess = (data) => {
 };
 
 const showSuccess = (data) => {
-  console.log(data);
   let showPollHtml = showPollTemplate({
     poll: data.poll,
   });
@@ -22,10 +20,6 @@ const showSuccess = (data) => {
   $('.content').empty().append(showPollHtml);
   $('.show-input').val('');
   $('#message-user').text('Showing Poll #' + data.poll.id);
-
-  // $('#edit-poll').show();
-  // $('#post-poll').show();
-  // $('#poll-destroy').show();
 };
 
 const createSuccess = (data) => {
@@ -35,25 +29,10 @@ const createSuccess = (data) => {
   $('.content').show();
   $('.content').empty().append(showPollHtml);
   $('#message-user').text('Success!');
-  console.log(data);
 };
 
 const updateSuccess = () => {
   $('#message-user').text('Success. Poll updated.');
-
-  // const updateSuccess = (data) => {
-//   console.log(data);
-//   let showPollHtml = showPollTemplate({
-//     poll: data.poll,
-//   });
-//   $('.content').show();
-//   $('.content').empty().append(showPollHtml);
-//   $('.show-input').val('');
-//   $('#message-user').text('Success.Showing Poll #' + data.poll.id);
-
-  // $('#edit-poll').show();
-  // $('#post-poll').show();
-  // $('#poll-destroy').show();
 };
 
 const destroySuccess = () => {
@@ -62,7 +41,6 @@ const destroySuccess = () => {
 };
 
 const failure = (error) => {
-  console.error(error);
   $('#message-user').text('Something went wrong. Please try again.');
 };
 
